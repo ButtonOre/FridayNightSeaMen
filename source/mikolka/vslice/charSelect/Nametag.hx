@@ -44,7 +44,7 @@ class Nametag extends FlxSprite
         case "bf":
           path = "boyfriend";
         case "btn":
-          path = "btn4";
+          path = "btn";
         case "rocko":
           path = "rocko";
         case "shade":
