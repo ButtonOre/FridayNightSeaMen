@@ -79,7 +79,7 @@ class StoryMenuState extends MusicBeatState
 
 		#if DISCORD_ALLOWED
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("Selecting seamen", null);
 		#end
 
 		final accept:String = controls.mobileC ? "A" : "ACCEPT";
