@@ -22,11 +22,11 @@ class FlashingState extends MusicBeatState
 		final escape:String = controls.mobileC ? 'B' : 'ESCAPE';
 
 		warnText = new FlxText(0, 0, FlxG.width,
-			"Hey, watch out!\n
-			This Mod contains some flashing lights!\n
-			Press " + enter + " to disable them now or go to Options Menu.\n
-			Press " + escape + " to ignore this message.\n
-			You've been warned!",
+			"oh wow boo\n
+			this mod has flashing lights (i think!)\n
+			press uhh " + enter + " to disable them now or go to options.\n
+			or press " + escape + " to not care at all\n
+			dont blame us because we tried to tell youy",
 			32);
 		warnText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
