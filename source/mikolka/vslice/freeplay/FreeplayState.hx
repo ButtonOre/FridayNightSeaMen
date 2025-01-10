@@ -1346,7 +1346,7 @@ class FreeplayState extends MusicBeatSubstate
 		FlxG.sound.music.fadeOut(0.9, 0);
 		new FlxTimer().start(0.9, _ ->
 		{
-			FlxG.switchState(new CharSelectSubState());
+			FlxG.switchState(new CharSelectSubState(true));
 		});
 		for (grpSpr in exitMoversCharSel.keys())
 		{

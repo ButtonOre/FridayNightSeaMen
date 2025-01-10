@@ -39,6 +39,7 @@ import mikolka.funkin.FramesJSFLParser.FramesJSFLInfo;
 import mikolka.funkin.FramesJSFLParser.FramesJSFLFrame;
 import mikolka.funkin.custom.VsliceSubState as MusicBeatSubState;
 import mikolka.compatibility.FunkinPath as Paths;
+import states.MainMenuState;
 
 class CharSelectSubState extends MusicBeatSubState
 {
@@ -91,8 +92,8 @@ class CharSelectSubState extends MusicBeatSubState
 
   var bopInfo:FramesJSFLInfo;
   var blackScreen:FunkinSprite;
-
-  public function new()
+  var SendToFreeplay:Bool = true;
+  public function new(Burger:Bool)
   {
     super();
     var charData = VsliceOptions.LAST_MOD; //? Added character save store
@@ -102,8 +103,8 @@ class CharSelectSubState extends MusicBeatSubState
       curChar = charData.char_name;
     }
     loadAvailableCharacters();
+    SendToFreeplay = Burger;
   }
-
   function loadAvailableCharacters():Void
   {
     var playerIds:Array<String> = PlayerRegistry.instance.listEntryIds();
@@ -704,14 +705,18 @@ class CharSelectSubState extends MusicBeatSubState
         ease: FlxEase.backIn,
         onComplete: function(_) {
           if(!FlxG.random.bool(0.01)) FlxTransitionableState.skipNextTransOut = true; //? a fix
-          FlxG.switchState(FreeplayState.build(null));
-          FlxG.switchState(FreeplayState.build(
-            {
+          if(SendToFreeplay) {
+            FlxG.switchState(FreeplayState.build(null));
+            FlxG.switchState(FreeplayState.build(
               {
-                fromCharSelect: true
+                {
+                  fromCharSelect: true
+                }
               }
-            }
             ));
+          } else {
+            FlxG.switchState(new MainMenuState());
+          }
         }
       });
     #if TOUCH_CONTROLS_ALLOWED

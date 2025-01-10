@@ -15,6 +15,7 @@ import shaders.ColorSwap;
 import states.StoryMenuState;
 import states.OutdatedState;
 import states.MainMenuState;
+import mikolka.vslice.charSelect.CharSelectSubState;
 import mikolka.vslice.components.ScreenshotPlugin;
 import mikolka.vslice.AttractState;
 
@@ -84,47 +85,6 @@ class TitleState extends MusicBeatState
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
-		#if CHECK_FOR_UPDATES
-		if (ClientPrefs.data.checkForUpdates && !closedState)
-		{
-			trace('checking for update');
-			var http = new haxe.Http("https://raw.githubusercontent.com/mikolka9144/P-Slice/master/gitVersion.txt");
-
-			http.onData = function(data:String)
-			{
-				updateVersion = data.split('\n')[0].trim();
-				var curVersion:String = MainMenuState.pSliceVersion.trim();
-				trace('version online: ' + updateVersion + ', your version: ' + curVersion);
-				if (updateVersion != curVersion)
-				{
-					trace('versions arent matching!');
-					mustUpdate = true;
-				}
-			}
-
-			http.onError = function(error)
-			{
-				trace('error: $error');
-			}
-
-			http.request();
-		}
-		#end
-
-		if(!initialized)
-		{
-			if (FlxG.save.data != null && FlxG.save.data.fullscreen)
-			{
-				FlxG.fullscreen = FlxG.save.data.fullscreen;
-				// trace('LOADED FULLSCREEN SETTING!!');
-			}
-			persistentUpdate = true;
-			persistentDraw = true;
-			#if TOUCH_CONTROLS_ALLOWED
-			MobileData.init();
-			#end
-		}
-
 		if (FlxG.save.data.weekCompleted != null)
 		{
 			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
@@ -132,7 +92,7 @@ class TitleState extends MusicBeatState
 
 		FlxG.mouse.visible = false;
 		#if FREEPLAY
-		MusicBeatState.switchState(new FreeplayState());
+		MusicBeatState.switchState(new CharSelectSubstate(false));
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
@@ -483,7 +443,9 @@ class TitleState extends MusicBeatState
 							FlxG.sound.music.fadeIn(4, 0, 0.7);
 						}
 						FlxTransitionableState.skipNextTransIn = true;
-						MusicBeatState.switchState(new MainMenuState());
+						var thingy:CharSelectSubState = new CharSelectSubState(false);
+						
+						MusicBeatState.switchState(thingy);
 					}
 
 					closedState = true;
