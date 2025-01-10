@@ -1,0 +1,17 @@
+{
+	"timeFormat": "ms",
+	"artist": "DoomCat0630",
+	"charter": "DoomCat0630",
+	"playData": {
+		"stage": "mainStage",
+		"noteStyle": "funkin",
+		"difficulties": ["easy", "normal", "hard"],
+		"characters": {"girlfriend": "gf", "opponent": "rocko", "player": "rocko"}
+	},
+	"songName": "Debt (Rocko Mix)",
+	"timeChanges": [
+		{"t": 0, "bpm": 110}
+	],
+	"generatedBy": "Psych Engine v1.0 - Chart Editor V-Slice Exporter",
+	"version": "2.2.3"
+}
