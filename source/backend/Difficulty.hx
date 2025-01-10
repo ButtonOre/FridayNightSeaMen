@@ -2,27 +2,30 @@ package backend;
 
 class Difficulty
 {
-	public static final defaultList:Array<String> = [
+	public static var defaultList(default, never):Array<String> = [
 		'Easy',
 		'Normal',
 		'Hard',
 		'Erect',
 		'Nightmare'
 	];
-	private static final defaultDifficulty:String = 'Normal'; //The chart that has no postfix and starting difficulty on Freeplay/Story Mode
-
 	public static var list:Array<String> = [];
+	private static var defaultDifficulty(default, never):String = 'Normal'; //The chart that has no suffix and starting difficulty on Freeplay/Story Mode
 
 	inline public static function getFilePath(num:Null<Int> = null)
 	{
 		if(num == null) num = PlayState.storyDifficulty;
 
-		var filePostfix:String = list[num];
-		if(filePostfix != null && Paths.formatToSongPath(filePostfix) != Paths.formatToSongPath(defaultDifficulty))
-			filePostfix = '-' + filePostfix;
+		var fileSuffix:String = list[num];
+		if(fileSuffix != defaultDifficulty)
+		{
+			fileSuffix = '-' + fileSuffix;
+		}
 		else
-			filePostfix = '';
-		return Paths.formatToSongPath(filePostfix);
+		{
+			fileSuffix = '';
+		}
+		return Paths.formatToSongPath(fileSuffix);
 	}
 
 	inline public static function loadFromWeek(week:WeekData = null)
@@ -60,11 +63,9 @@ class Difficulty
 		list = diffs.copy();
 	}
 
-	inline public static function getString(?num:Null<Int> = null, ?canTranslate:Bool = true):String
+	inline public static function getString(num:Null<Int> = null):String
 	{
-		var diffName:String = list[num == null ? PlayState.storyDifficulty : num];
-		if(diffName == null) diffName = defaultDifficulty;
-		return canTranslate ? Language.getPhrase('difficulty_$diffName', diffName) : diffName;
+		return list[num == null ? PlayState.storyDifficulty : num];
 	}
 
 	inline public static function getDefault():String
