@@ -49,6 +49,8 @@ class Nametag extends FlxSprite
           path = "rocko";
         case "shade":
           path = "shade";
+        case "bazzer":
+          path = "shade";
       }
 
       loadGraphic(Paths.image('charSelect/' + path + "Nametag"));
