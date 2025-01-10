@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="senvepixel.png">
+	<!-- Created with Adobe Animate version 24.0.7.61 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="confirm0000" x="0" y="0" width="144" height="36" frameX="-105" frameY="0" frameWidth="249" frameHeight="37"/>
+	<SubTexture name="confirm0001" x="0" y="36" width="148" height="34" frameX="-32" frameY="-2" frameWidth="249" frameHeight="37"/>
+	<SubTexture name="confirm0002" x="0" y="70" width="140" height="36" frameX="-2" frameY="0" frameWidth="249" frameHeight="37"/>
+	<SubTexture name="confirm0003" x="0" y="106" width="143" height="37" frameX="0" frameY="0" frameWidth="249" frameHeight="37"/>
+	<SubTexture name="confirm-hold0000" x="0" y="106" width="143" height="37" frameX="0" frameY="0" frameWidth="249" frameHeight="37"/>
+	<SubTexture name="idle0000" x="0" y="0" width="144" height="36" frameX="0" frameY="0" frameWidth="249" frameHeight="37"/>
+</TextureAtlas>
