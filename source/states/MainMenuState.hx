@@ -72,7 +72,7 @@ class MainMenuState extends MusicBeatState
 		magenta.updateHitbox();
 		magenta.screenCenter();
 		magenta.visible = false;
-		magenta.color = 0xFFfd719b;
+		magenta.color = 0xffff0000;
 		add(magenta);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
@@ -163,7 +163,7 @@ class MainMenuState extends MusicBeatState
 				FlxTransitionableState.skipNextTransOut = false;
 				if (optionShit[curSelected] == 'donate')
 				{
-					CoolUtil.browserLoad('https://www.makeship.com/shop/creator/friday-night-funkin');
+					CoolUtil.browserLoad('https://www.youtube.com/@BTN4');
 				}
 				else
 				{
