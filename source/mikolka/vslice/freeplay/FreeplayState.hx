@@ -54,6 +54,7 @@ using mikolka.funkin.utils.ArrayTools;
 /**
  * Parameters used to initialize the FreeplayState.
  */
+ // example commit
 typedef FreeplayStateParams =
 {
 	?fromCharSelect:Bool,
