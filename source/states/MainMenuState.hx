@@ -81,19 +81,27 @@ class MainMenuState extends MusicBeatState
 		for (i in 0...optionShit.length)
 		{
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
+			menuItem.scale.set(0.75,0.75);
 			var menuItem:FlxSprite = new FlxSprite(FlxG.width, (i * 140) + offset);
 			menuItem.antialiasing = ClientPrefs.data.antialiasing;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			menuItem.animation.play('idle');
+			if (optionShit[i] == 'story_mode' || optionShit[i] == 'freeplay') {
+				menuItem.frames = Paths.getSparrowAtlas('mainmenu/Buttons_Assets');
+				menuItem.animation.addByPrefix('idle', optionShit[i] + "_Static");
+				menuItem.animation.addByPrefix('selected', optionShit[i] + "_Pressed");
+				menuItem.animation.play('idle');
+			} else {
+				menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
+				menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
+				menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
+				menuItem.animation.play('idle');
+			}
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if (optionShit.length < 6)
 				scr = 0;
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.updateHitbox();
-			menuItem.x = FlxG.width - menuItem.width;
+			menuItem.x = FlxG.width - menuItem.width + 5;
 		}
 
 		var psychVer:FlxText = new FlxText(0, FlxG.height - 18, FlxG.width, "shoutout to shadowmario for PsychEngine", 12);
@@ -253,7 +261,7 @@ class MainMenuState extends MusicBeatState
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 		menuItems.members[curSelected].animation.play('idle');
 		menuItems.members[curSelected].updateHitbox();
-		menuItems.members[curSelected].x = FlxG.width - menuItems.members[curSelected].width;
+		menuItems.members[curSelected].x = FlxG.width - menuItems.members[curSelected].width + 5;
 
 		curSelected += huh;
 
@@ -264,7 +272,7 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.members[curSelected].animation.play('selected');
 		menuItems.members[curSelected].centerOffsets();
-		menuItems.members[curSelected].x = FlxG.width - menuItems.members[curSelected].width;
+		menuItems.members[curSelected].x = FlxG.width - menuItems.members[curSelected].width + 5;
 
 		camFollow.setPosition(menuItems.members[curSelected].getGraphicMidpoint().x,
 			menuItems.members[curSelected].getGraphicMidpoint().y - (menuItems.length > 4 ? menuItems.length * 8 : 0));

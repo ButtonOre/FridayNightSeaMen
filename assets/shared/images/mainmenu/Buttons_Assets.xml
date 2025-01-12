@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Buttons_Assets.png">
+	<!-- Created with Adobe Animate version 24.0.7.61 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="freeplay_Pressed0000" x="0" y="217" width="902" height="162" frameX="0" frameY="-2" frameWidth="902" frameHeight="217"/>
+	<SubTexture name="freeplay_Static0000" x="0" y="379" width="903" height="214"/>
+	<SubTexture name="story_mode_Pressed0000" x="0" y="593" width="902" height="214"/>
+	<SubTexture name="story_mode_Static0000" x="0" y="807" width="902" height="214"/>
+</TextureAtlas>
