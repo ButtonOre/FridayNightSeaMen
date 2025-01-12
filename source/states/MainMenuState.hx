@@ -81,8 +81,8 @@ class MainMenuState extends MusicBeatState
 		for (i in 0...optionShit.length)
 		{
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			menuItem.scale.set(0.75,0.75);
 			var menuItem:FlxSprite = new FlxSprite(FlxG.width, (i * 140) + offset);
+			menuItem.scale.set(0.75,0.75);
 			menuItem.antialiasing = ClientPrefs.data.antialiasing;
 			if (optionShit[i] == 'story_mode' || optionShit[i] == 'freeplay') {
 				menuItem.frames = Paths.getSparrowAtlas('mainmenu/Buttons_Assets');
