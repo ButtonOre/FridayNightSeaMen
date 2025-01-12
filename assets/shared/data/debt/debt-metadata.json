@@ -6,7 +6,7 @@
 		"stage": "mainStage",
 		"noteStyle": "funkin",
 		"difficulties": ["easy", "normal", "hard"],
-		"characters": {"girlfriend": "gf", "opponent": "dad", "player": "bf"}
+		"characters": {"girlfriend": "gf", "opponent": "senve", "player": "bf"}
 	},
 	"songName": "Debt",
 	"timeChanges": [
