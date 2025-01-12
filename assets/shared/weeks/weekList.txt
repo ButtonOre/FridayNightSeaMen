@@ -1,5 +1,11 @@
 tutorial
 week1
+week1-plex
+week1-senve
+week1-rocko
+week1-bazzer
+week1-chicken
+week-erect
 week2
 week3
 week4
