@@ -105,7 +105,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.updateHitbox();
 			FlxTween.tween(menuItem,{x: FlxG.width - menuItem.width + 15},2,{
 				ease: FlxEase.backOut,
-				startDelay: 0.05 * i,
+				startDelay: 0.25 * i,
 				onComplete: function(twn:FlxTween) {
 					dontMove = false;
 				}
