@@ -6,9 +6,7 @@
     "dad": ["dadSticker1", "dadSticker2", "dadSticker3"],
     "pico": ["picoSticker1", "picoSticker2", "picoSticker3"],
     "mom": ["momSticker1", "momSticker2", "momSticker3"],
-    "monster": ["monsterSticker1", "monsterSticker2", "monsterSticker3"],
-    "senve": ["gfSticker1", "gfSticker2", "gfSticker3"],
-    "kami": ["kamiSticker1", "kamiSticker2", "kamiSticker3"]
+    "monster": ["monsterSticker1", "monsterSticker2", "monsterSticker3"]
   },
   "stickerPacks": {
     "bf-gf": ["bf", "gf"],

@@ -715,6 +715,10 @@ class CharSelectSubState extends MusicBeatSubState
               }
             ));
           } else {
+            FunkinSound.playMusic('freakyMenu', {
+              overrideExisting: true,
+              restartTrack: false
+            });
             FlxG.switchState(new MainMenuState());
             // example commit
           }

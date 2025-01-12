@@ -15,6 +15,7 @@ class MainMenuState extends MusicBeatState
 	public static var pSliceVersion:String = '2.2'; 
 	public static var funkinVersion:String = '0.5.3'; // Version of funkin' we are emulationg
 	public static var curSelected:Int = 0;
+	var dontMove:Bool = true;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 
@@ -82,6 +83,7 @@ class MainMenuState extends MusicBeatState
 		{
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
 			var menuItem:FlxSprite = new FlxSprite(FlxG.width, (i * 140) + offset);
+			menuItem.x = FlxG.width + menuItem.width;
 			menuItem.scale.set(0.75,0.75);
 			menuItem.antialiasing = ClientPrefs.data.antialiasing;
 			if (optionShit[i] == 'story_mode' || optionShit[i] == 'freeplay') {
@@ -101,7 +103,13 @@ class MainMenuState extends MusicBeatState
 				scr = 0;
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.updateHitbox();
-			menuItem.x = FlxG.width - menuItem.width + 5;
+			FlxTween.tween(menuItem,{x: FlxG.width - menuItem.width + 15},2,{
+				ease: FlxEase.backOut,
+				startDelay: 0.05 * i,
+				onComplete: function(twn:FlxTween) {
+					dontMove = false;
+				}
+			});
 		}
 
 		var psychVer:FlxText = new FlxText(0, FlxG.height - 18, FlxG.width, "shoutout to shadowmario for PsychEngine", 12);
@@ -145,6 +153,7 @@ class MainMenuState extends MusicBeatState
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * elapsed;
+			FlxG.sound.music.pitch = 1;
 			//if (FreeplayState.vocals != null)
 				//FreeplayState.vocals.volume += 0.5 * elapsed;
 		}
@@ -261,7 +270,9 @@ class MainMenuState extends MusicBeatState
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 		menuItems.members[curSelected].animation.play('idle');
 		menuItems.members[curSelected].updateHitbox();
-		menuItems.members[curSelected].x = FlxG.width - menuItems.members[curSelected].width + 5;
+		if (!dontMove) {
+			menuItems.members[curSelected].x = FlxG.width - menuItems.members[curSelected].width + 5;
+		}
 
 		curSelected += huh;
 
@@ -272,7 +283,9 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.members[curSelected].animation.play('selected');
 		menuItems.members[curSelected].centerOffsets();
-		menuItems.members[curSelected].x = FlxG.width - menuItems.members[curSelected].width + 5;
+		if (!dontMove) {
+			menuItems.members[curSelected].x = FlxG.width - menuItems.members[curSelected].width + 5;
+		}
 
 		camFollow.setPosition(menuItems.members[curSelected].getGraphicMidpoint().x,
 			menuItems.members[curSelected].getGraphicMidpoint().y - (menuItems.length > 4 ? menuItems.length * 8 : 0));
