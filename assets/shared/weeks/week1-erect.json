@@ -1,6 +1,6 @@
 {
 	"songs": [
-		["Pico Erect", "pico", [148, 22, 83]],
+		["Debt Erect", "pico", [148, 22, 83]],
 		["Philly Nice Erect", "pico", [148, 22, 83]],
 		["Blammed Erect", "pico", [148, 22, 83]]
 	],
@@ -10,11 +10,11 @@
 		"bf",
 		"gf"
 	],
-	"weekBackground": "philly",
+	"weekBackground": "stage",
 	"difficulties": "Erect,Nightmare",
-	"storyName": "PICO",
+	"storyName": "Lover Boy",
 	"weekBefore": "week2",
-	"weekName": "Week 3",
+	"weekName": "Week 1",
 	"startUnlocked": true,
 
 	"hideStoryMode": true,
