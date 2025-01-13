@@ -10,9 +10,9 @@
 		"bf",
 		"gf"
 	],
-	"weekBackground": "philly",
+	"weekBackground": "stage",
 
-	"storyName": "PICO",
+	"storyName": "Lover Boy",
 	"weekBefore": "week2",
 	"weekName": "Week 3",
 	"startUnlocked": true,
