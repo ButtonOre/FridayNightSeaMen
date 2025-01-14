@@ -9,5 +9,7 @@ git branch -M main
 git fetch
 git pull origin main
 
+lime build windows -debug
+
 echo %strrr%
 pause
