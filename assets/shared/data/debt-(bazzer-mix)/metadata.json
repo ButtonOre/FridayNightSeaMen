@@ -1,9 +1,10 @@
 {
-	"songRating": 11,
-	"albumId": "expansion2",
+	"songRating": 25,
+	"allowNewTag": false,
+	"freeplayPrevStart": 1,
+	"freeplayPrevEnd": 24.39,
+	"freeplaySongLength": 125.428,
 	"freeplayCharacter": "bazzer",
-	"freeplaySongLength": 102.857143,
-	"freeplayPrevEnd": 20,
-	"altInstrumentalSongs": "Debt",
-	"freeplayPrevStart": 0
+	"albumId": "expansion2",
+	"altInstrumentalSongs": "Debt"
 }
