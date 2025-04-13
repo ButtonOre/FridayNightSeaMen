@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"songRating": 4,
 	"allowNewTag": false,
@@ -7,4 +8,15 @@
 	"freeplayCharacter": "senve",
 	"albumId": "expansion2",
 	"altInstrumentalSongs": "Lover Boy"
+=======
+{
+	"songRating": 4,
+	"allowNewTag": false,
+	"freeplayPrevStart": 0,
+	"freeplayPrevEnd": 22.49,
+	"freeplaySongLength": 115.679,
+	"freeplayCharacter": "senve",
+	"albumId": "expansion2",
+	"altInstrumentalSongs": "Lover Boy"
+>>>>>>> 70c6546eea6eb1221e0a07f64a3580ef18d999bf
 }
