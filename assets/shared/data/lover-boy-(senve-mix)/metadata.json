@@ -1,9 +1,10 @@
 {
 	"songRating": 4,
-	"albumId": "volume1",
+	"allowNewTag": false,
+	"freeplayPrevStart": 0,
+	"freeplayPrevEnd": 14.35,
+	"freeplaySongLength": 70.333,
 	"freeplayCharacter": "senve",
-	"freeplaySongLength": 98.058027,
-	"freeplayPrevEnd": 20,
-	"altInstrumentalSongs": "Lover-Boy-(Senve-Mix)",
-	"freeplayPrevStart": 0
+	"albumId": "volume1",
+	"altInstrumentalSongs": "Lover-Boy"
 }
