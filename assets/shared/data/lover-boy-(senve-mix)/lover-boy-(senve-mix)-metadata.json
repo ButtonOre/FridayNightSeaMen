@@ -1,22 +1,17 @@
-<<<<<<< HEAD
 {
-	"songRating": 4,
-	"allowNewTag": false,
-	"freeplayPrevStart": 0,
-	"freeplayPrevEnd": 22.49,
-	"freeplaySongLength": 115.679,
-	"freeplayCharacter": "senve",
-	"albumId": "expansion2",
-	"altInstrumentalSongs": "Lover Boy"
-=======
-{
-	"songRating": 4,
-	"allowNewTag": false,
-	"freeplayPrevStart": 0,
-	"freeplayPrevEnd": 22.49,
-	"freeplaySongLength": 115.679,
-	"freeplayCharacter": "senve",
-	"albumId": "expansion2",
-	"altInstrumentalSongs": "Lover Boy"
->>>>>>> 70c6546eea6eb1221e0a07f64a3580ef18d999bf
+	"timeFormat": "ms",
+	"artist": "BTN4",
+	"charter": "Senve & DoomCat0630",
+	"playData": {
+		"stage": "mainStage",
+		"noteStyle": "funkin",
+		"difficulties": ["easy", "normal", "hard"],
+		"characters": {"girlfriend": "gf", "opponent": "senve", "player": "bf"}
+	},
+	"songName": "Lover Boy",
+	"timeChanges": [
+		{"t": 0, "bpm": 160}
+	],
+	"generatedBy": "Psych Engine v1.0 - Chart Editor V-Slice Exporter",
+	"version": "2.2.3"
 }
