@@ -9,8 +9,8 @@
     "monster": ["monsterSticker1", "monsterSticker2", "monsterSticker3"]
   },
   "stickerPacks": {
-    "bf-gf": ["bf", "gf"],
+    "bf-gf": ["gf"],
     "parents": ["dad", "mom"],
-    "all": ["bf", "gf", "dad", "mom", "monster", "pico"]
+    "all": ["gf", "dad", "mom", "monster", "pico"]
   }
 }
