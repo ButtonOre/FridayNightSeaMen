@@ -172,7 +172,7 @@
 				"zIndex": 500,
 				"renderType": "animateatlas",
 				"loopFrame": 137,
-				"assetPath": "shared:resultScreen/results-bf/resultsPERFECT"
+				"assetPath": "shared:resultScreen/results-btn/resultsPERFECT"
 			},
 			{
 				"offsets": [
@@ -182,7 +182,7 @@
 				"zIndex": 501,
 				"renderType": "animateatlas",
 				"loopFrame": 43,
-				"assetPath": "shared:resultScreen/results-bf/resultsPERFECT/hearts",
+				"assetPath": "shared:resultScreen/results-btn/resultsPERFECT/hearts",
 				"delay": 4.41
 			}
 		],
