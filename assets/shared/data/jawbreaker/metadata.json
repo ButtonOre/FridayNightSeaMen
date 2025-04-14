@@ -1,9 +1,10 @@
 {
-	"songRating": 4,
-	"albumId": "volume1",
+	"songRating": 6,
+	"allowNewTag": false,
+	"freeplayPrevStart": 0,
+	"freeplayPrevEnd": 34.54,
+	"freeplaySongLength": 169.343,
 	"freeplayCharacter": "",
-	"freeplaySongLength": 98.058027,
-	"freeplayPrevEnd": 20,
-	"altInstrumentalSongs": "Jawbreaker-Erect",
-	"freeplayPrevStart": 0
+	"albumId": "volume1",
+	"altInstrumentalSongs": "Jawbreaker-Erect"
 }
