@@ -1,9 +1,10 @@
 {
-	"songRating": 8,
-	"albumId": "volume3",
-	"freeplayCharacter": "boyfriend",
-	"freeplaySongLength": 115.2,
-	"freeplayPrevEnd": 20,
-	"altInstrumentalSongs": "Debt",
-	"freeplayPrevStart": 0
+	"songRating": 69,
+	"allowNewTag": false,
+	"freeplayPrevStart": 0,
+	"freeplayPrevEnd": 30.76,
+	"freeplaySongLength": 145.886,
+	"freeplayCharacter": "",
+	"albumId": "volume1",
+	"altInstrumentalSongs": "Debt"
 }
