@@ -1,10 +1,10 @@
 {
-	"songRating": 4,
-	"allowNewTag": false,
-	"freeplayPrevStart": 0,
-	"freeplayPrevEnd": 14.35,
-	"freeplaySongLength": 70.333,
+	"songRating": 34,
+	"allowNewTag": true,
+	"freeplayPrevStart": 10,
+	"freeplayPrevEnd": 30.85,
+	"freeplaySongLength": 67.895,
 	"freeplayCharacter": "shade",
 	"albumId": "volume1",
-	"altInstrumentalSongs": "Lover-Boy"
+	"altInstrumentalSongs": "Lover-Boy, Lover-Boy-(Rocko-Mix), Lover-Boy-Erect, Lover-Boy-(Senve-Mix)"
 }
