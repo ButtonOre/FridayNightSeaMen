@@ -1,9 +1,10 @@
 {
 	"songRating": 11,
-	"albumId": "expansion2",
+	"allowNewTag": false,
+	"freeplayPrevStart": 0,
+	"freeplayPrevEnd": 22.49,
+	"freeplaySongLength": 115.679,
 	"freeplayCharacter": "senve",
-	"freeplaySongLength": 102.857143,
-	"freeplayPrevEnd": 20,
-	"altInstrumentalSongs": "Debt",
-	"freeplayPrevStart": 0
+	"albumId": "expansion2",
+	"altInstrumentalSongs": "Debt"
 }
